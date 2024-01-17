@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testezinho</title>
+</head>
+<body>
+  <h1>Multiplicando valores</h1>
+  <input type="number" name="txtn3" id="txtn3"> x
+  <input type="number" name="txtn4" id="txtn4">
+  <input type="button" value="Multiplicar" onclick="multiplicar()">
+  <div id="res">Resultado</div>
+  <script>
+    function multiplicar() {
+      var n3 = window.document.getElementById('txtn3')
+      var n4 = window.document.getElementById('txtn4')
+      var res = window.document.getElementById('res')
+      var n3 = Number(n3.value)
+      var n4 = Number(n4.value)
+      s = n3 + n4 
+      res.innerHTML = `A MULTIPLICAÇÃO DE ${n3} E ${n4} É ${s}`
+      
+    }
+  </script>
+</body>
+</html>
