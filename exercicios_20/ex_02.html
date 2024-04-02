@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CIRCULO</title>
+	<style>
+		body{
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			font-weight: 18pt;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		var circulo = parseFloat(prompt("Digite o diamêtro do circulo: "))
+		var pi = parseFloat(3.14159)
+		
+		raio = circulo / 2
+		area = pi *(raio ** 2)
+		perimetro = 2 * pi * raio
+
+		document.write("O raio do circulo é: " + raio.toFixed(2) + "<br />")
+		document.write("O area do circulo é: " + area.toFixed(2) + "<br />")
+		document.write("O perimetro do circulo é: " + perimetro.toFixed(2) + "<br />")
+
+	</script>
+</body>
+</html>
