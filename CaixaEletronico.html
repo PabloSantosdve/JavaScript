@@ -6,7 +6,7 @@
 		var saldo = 100.5; //Float
 		function inicio() {
 
-			var escolha = parseInt(prompt('Selecione uma opção 1.) Saldo 2.) Depósito 3.) Saque 4.) Sair'));
+			var escolha = parseInt(prompt('Selecione uma opção \n 1.) Saldo \n 2.) Depósito \n 3.) Saque \n 4.) Sair'));
 
 			if (escolha === 1) {
 				ver_saldo();
@@ -32,7 +32,10 @@
 			if (isNaN(deposito) || deposito === '') {
 				alert('Por favor, informe um número:');
 				fazer_deposito();
-			} else {
+			}else if (deposito < 0 ){
+				alert('Por favor, deposite algum valor: ')
+				fazer_deposito()
+			}else {
 				saldo += deposito;
 				ver_saldo();
 			}
@@ -43,7 +46,15 @@
 			if (isNaN(saque) || saque === '') {
 				alert('Por favor, informe um número:');
 				fazer_saque();
-			} else {
+			}
+			else if( saque > saldo){
+				alert('Você está tentando sacar um valor maior que o seu saldo, por favor informe outro valor: ')
+				fazer_saque()
+			}else if(saque < 0){
+				alert('Por favor, informe um número:');
+				fazer_deposito();
+			}
+			 else {
 				saldo -= saque;
 				
 				ver_saldo();
@@ -68,28 +79,7 @@
 		
 		inicio();
 	</script>
-
-<!--[if gte mso 9]><xml>
-<mso:CustomDocumentProperties>
-<mso:xd_Signature msdt:dt="string"></mso:xd_Signature>
-<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">GABRIEL AZEVEDO</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
-<mso:Order msdt:dt="string">2400.00000000000</mso:Order>
-<mso:xd_ProgID msdt:dt="string"></mso:xd_ProgID>
-<mso:ComplianceAssetId msdt:dt="string"></mso:ComplianceAssetId>
-<mso:TemplateUrl msdt:dt="string"></mso:TemplateUrl>
-<mso:ReferenceId msdt:dt="string"></mso:ReferenceId>
-<mso:_ExtendedDescription msdt:dt="string"></mso:_ExtendedDescription>
-<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">GABRIEL AZEVEDO</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
-<mso:TriggerFlowInfo msdt:dt="string"></mso:TriggerFlowInfo>
-<mso:ContentTypeId msdt:dt="string">0x01010007715694252FA147AD75DD5D81F5DACE</mso:ContentTypeId>
-<mso:_SourceUrl msdt:dt="string"></mso:_SourceUrl>
-<mso:_SharedFileIndex msdt:dt="string"></mso:_SharedFileIndex>
-<mso:TaxCatchAll msdt:dt="string"></mso:TaxCatchAll>
-<mso:MediaServiceImageTags msdt:dt="string"></mso:MediaServiceImageTags>
-<mso:lcf76f155ced4ddcb4097134ff3c332f msdt:dt="string"></mso:lcf76f155ced4ddcb4097134ff3c332f>
-</mso:CustomDocumentProperties>
-</xml><![endif]-->
-<title></title></head>
+<title>E o banco ein !?</title></head>
 
 <body>
 
