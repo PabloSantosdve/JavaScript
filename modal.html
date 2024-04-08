@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/modal.css" type="text/css" />
+	<script defer src="javascript/modal.js" type="text/javascript"></script>
+	<title>Modal</title>
+</head>
+<body>
+	<h1>Testando um Modal na pagina</h1>
+
+<!-- Criando um botão que chama o modal -->
+	<div class="botao" onclick="abrirModal()">
+		Clique aqui para abrir o modal
+	</div>
+
+<!-- Tela escura transparente no fundo do modal-->
+	<div class="tela_escura">
+		<!-- Modal com o conteúdo, neste caso uma publi (imagem) -->
+		<div class="modal">
+			<div class="fechar" onclick="fecharModal()">X</div>
+			<a href="https://www.instagram.com/deborapaixaoterapeuta/" target="_blank" rel="external"><img src="imagens/imagem_carreta_furacao.png" alt="Imagem da debora com a carreta furacao" /></a>
+		</div>
+	</div>
+</body>
+</html>
