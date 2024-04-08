@@ -1,0 +1,82 @@
+
+body{
+	text-align: center;
+}
+
+.botao{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	
+	padding: 30px;
+	border-radius: 10px;
+	background-color: rgb(255, 0, 0);
+	
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	transition: all 0.3s;
+
+}
+
+.botao:hover{
+	background-color: chartreuse;
+}
+
+.tela_escura{
+	position: absolute;
+	top: 0;/* O topp e o left em 0 faz com que a div tome a tela toda*/
+	left: 0; 
+	width: 100%;
+	height: 100%;
+	background-color: rgba(70, 50, 50, 80%);
+
+	visibility: hidden;/*Vai deixar o elemento invisivel*/
+}
+
+.modal{
+	background-color: white;
+	width: 30%;
+	height: 40%;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	animation-name: abrir_modal;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out; /*Tipo de vizualisação da animação*/
+}
+
+.modal img{
+	width: 90%;
+	height: 90%;
+	margin-top: 20px;
+	margin-left: 15px;
+
+}
+
+.fechar{
+	width: 20px;
+	height: 20px;
+
+	background-color: white;
+	
+	float: right;
+	cursor: pointer;
+	border: 0.5px solid black;
+}
+
+@keyframes abrir_modal{
+	from{
+		opacity: 0.0;/*Totalmente transaparente*/
+		width: 0px;
+		height: 0px;
+	}
+
+	to{
+		opacity: 1.0;/*Totalmente solido*/
+		width: 30%;
+		height: 40%;
+	}
+}
