@@ -3,6 +3,8 @@
 <head>
 
 	<script>
+		let nome = prompt("Qual o seu nome ?")
+		alert("Olá " + nome + " é um prazer ter você aqui !!!")
 		var saldo = 100.5; //Float
 		function inicio() {
 
@@ -48,10 +50,10 @@
 				fazer_saque();
 			}
 			else if( saque > saldo){
-				alert('Você está tentando sacar um valor maior que o seu saldo, por favor informe outro valor: ')
+				alert('Operação não autorizada')
 				fazer_saque()
 			}else if(saque < 0){
-				alert('Por favor, informe um número que sejs positivo:');
+				alert('Operação não autorizada');
 				fazer_deposito();
 			}
 			 else {
