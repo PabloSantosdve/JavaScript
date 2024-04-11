@@ -17,3 +17,4 @@ function fecharModal(){
 	janela_escura.style.visibility="hidden";
 	imagem.style.visibility="hidden";
 }
+ 
