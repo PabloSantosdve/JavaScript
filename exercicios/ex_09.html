@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DEPOSITO</title>
+	<style>
+		body{
+			font-size: 16pt;
+			font-weight: bold;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		var dep = parseFloat(prompt("Digite o valor do deposito mensal: ")) 
+		var juros = parseFloat(prompt("Digite o valor do juros mensal: (com casa decimal) ")) 
+
+		montante = dep * 12
+		montantefinal = montante * juros
+
+		document.write("O montante dessa poupança depois de 12 meses é:  " + montantefinal.toFixed(2) )
+	</script>
+</body>
+</html>

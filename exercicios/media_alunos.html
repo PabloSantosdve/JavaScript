@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Medias dos alunos</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let n1 = parseFloat(prompt("Entre com a primeira nota: "))
+let n2 = parseFloat(prompt("Entre com a segunda nota: "))
+let n3 = parseFloat(prompt("Entre com a terceira nota: "))
+let n4 = parseFloat(prompt("Entre com a quarta nota: "))
+
+/*if (n1 >10){
+	document.write ("Número invalido")
+	let n1 = parseFloat(prompt("Entre com a primeira nota: "))
+}else{
+	let n2 = parseFloat(prompt("Entre com a segunda nota: "))
+	if (n2 >10){
+	document.write ("Número invalido")
+	let n2 = parseFloat(prompt("Entre com a segunda nota: "))
+}
+else{
+	let n3 = parseFloat(prompt("Entre com a terceira nota: "))
+	if(n3 >10){	
+	document.write ("Número invalido")
+	let n3 = parseFloat(prompt("Entre com a terceira nota: "))
+	}
+else{
+	let n4 = parseFloat(prompt("Entre com a terceira nota: "))
+	if(n4 >10){	
+	document.write ("Número invalido")
+	let n4 = parseFloat(prompt("Entre com a terceira nota: "))
+	}
+}
+}
+}*/
+
+media = (n1 + n2 + n3 + n4) /4
+
+document.write("A media do aluno é :" + media + "<br />")
+
+if(media >= 6)
+{
+	document.write("Você está aprovado")
+}
+else if(media >= 5)
+{
+	document.write("Você está de recuperação")
+}
+else
+{
+	document.write("Você está reprovado")
+}
+let numero_1 = parseInt(prompt("Entre com um numero entre 10 e 20: "))
+ 
+if(numero_1 >= 10 || numero_1 <= 20){
+	document.write("numero ok")
+}else{
+	document.write("numero invalido")
+}
+/* Operador ternário && significa "e", e "OU" é ||*/
+	</script>
+</body>
+</html>
