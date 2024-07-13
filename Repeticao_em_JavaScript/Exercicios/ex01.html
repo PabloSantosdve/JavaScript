@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contador</title>
+	<style>
+		body{
+	background-color: rgb(85, 162, 185);
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+#principal{
+	background-color: white;
+	width:  60%;
+	margin: auto;
+	height:  auto;
+
+	display: flex;
+	flex-direction: column;
+	gap:  70px;
+	padding:  30px;
+	border-radius:  15px;
+	box-shadow:  2px 2px 10px rgba(0, 0, 0, 0.281);
+}
+
+footer{
+	color: white;
+	text-align: center;
+	font-style: italic;
+}
+
+.res{
+	font-size:  25px;
+	height:  auto;
+	font-weight: bold;
+	
+}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Vamos contar ?</h1>
+	</header>
+	<section id="principal">
+			<div>
+				<p>Inicio:
+					<input type="number" name="n1" id="n1" min="0">
+				</p>
+
+				<p>Fim:
+					<input type="number" name="n2" id="n2" min="0">
+				</p>
+
+				<p>Passo:
+					<input type="number" name="contagem" id="n3" min="0">
+				</p>
+
+				<button onclick="Contador()">Contar</button>
+			</div>
+
+			<div class="res">
+				Contando:
+			</div>
+	</section>
+	<footer>
+		<p>&copy; Pablo Henrique</p>
+</footer>
+
+<script>
+			n1 = window.document.getElementById('n1')
+			n2 = window.document.getElementById('n2')
+			n3 = window.document.getElementById('n3')
+		function Contador(){
+			if(n1 <= 0 || isNaN){
+			alert('Coloque um valor positivo na primeira caixinha ')
+		}else{
+			
+		}
+		
+		}
+		
+
+
+
+
+</script>
+
+</body>
+</html>
