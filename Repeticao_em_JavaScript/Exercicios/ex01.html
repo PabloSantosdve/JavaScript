@@ -3,40 +3,44 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Contador</title>
+	<title>Super Contador</title>
 	<style>
-		body{
-	background-color: rgb(85, 162, 185);
-	font-family: Arial, Helvetica, sans-serif;
-	text-align: center;
-}
+		/* Define o estilo do corpo da página */
+		body {
+			background-color: rgb(85, 162, 185);
+			font-family: Arial, Helvetica, sans-serif;
+			text-align: center;
+		}
 
-#principal{
-	background-color: white;
-	width:  60%;
-	margin: auto;
-	height:  auto;
+		/* Define o estilo do cabeçalho */
+		header {
+			color: white;
+			text-align: center;
+		}
 
-	display: flex;
-	flex-direction: column;
-	gap:  70px;
-	padding:  30px;
-	border-radius:  15px;
-	box-shadow:  2px 2px 10px rgba(0, 0, 0, 0.281);
-}
+		/* Define o estilo da seção principal */
+		#principal {
+			background-color: white;
+			border-radius: 10px;
+			padding: 15px;
+			width: 500px;
+			margin: auto;
+			box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.322);
+		}
 
-footer{
-	color: white;
-	text-align: center;
-	font-style: italic;
-}
+		/* Define o estilo do rodapé */
+		footer {
+			color: white;
+			text-align: center;
+			font-style: italic;
+		}
 
-.res{
-	font-size:  25px;
-	height:  auto;
-	font-weight: bold;
-	
-}
+		/* Define o estilo da classe "res" */
+		.res {
+			font-size: 25px;
+			height: auto;
+			font-weight: bold;
+		}
 	</style>
 </head>
 <body>
@@ -44,48 +48,60 @@ footer{
 		<h1>Vamos contar ?</h1>
 	</header>
 	<section id="principal">
-			<div>
-				<p>Inicio:
-					<input type="number" name="n1" id="n1" min="0">
-				</p>
+		<div id="dados">
+			<p>Inicio: <input type="number" name="inicio" id="txti"></p>
+			<p>Fim: <input type="number" name="fim" id="txtf"></p>
+			<p>Passo: <input type="number" name="passo" id="txtp"></p>
+			<p><input type="button" value="Contar" onclick="contar()"></p>
+		</div>
 
-				<p>Fim:
-					<input type="number" name="n2" id="n2" min="0">
-				</p>
-
-				<p>Passo:
-					<input type="number" name="contagem" id="n3" min="0">
-				</p>
-
-				<button onclick="Contador()">Contar</button>
-			</div>
-
-			<div class="res">
-				Contando:
-			</div>
+		<div id="res">
+			Preparando contagem...
+		</div>
 	</section>
 	<footer>
 		<p>&copy; Pablo Henrique</p>
-</footer>
+	</footer>
 
-<script>
-			n1 = window.document.getElementById('n1')
-			n2 = window.document.getElementById('n2')
-			n3 = window.document.getElementById('n3')
-		function Contador(){
-			if(n1 <= 0 || isNaN){
-			alert('Coloque um valor positivo na primeira caixinha ')
-		}else{
-			
+	<script>
+		/* Função para realizar a contagem */
+		function contar() {
+			let ini = document.getElementById('txti');  // Obtém o valor inicial
+			let fim = document.getElementById('txtf');  // Obtém o valor final
+			let passo = document.getElementById('txtp'); // Obtém o valor do passo
+			let res = document.getElementById('res');   // Área onde o resultado será exibido
+
+			// Verifica se algum dos valores de entrada está vazio
+			if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+				res.innerHTML = 'Impossível contar !!';
+			} else {
+				res.innerHTML = 'Contando: <br>';
+
+				let i = Number(ini.value);  // Converte o valor inicial para número
+				let f = Number(fim.value);  // Converte o valor final para número
+				let p = Number(passo.value); // Converte o valor do passo para número
+
+				// Verifica se o passo é válido
+				if (p <= 0) {
+					window.alert('Passo inválido! Considerando PASSO 1');
+					p = 1;
+				}
+
+				// Realiza a contagem crescente
+				if (i < f) {
+					for (let c = i; c <= f; c += p) {
+						res.innerHTML += `${c} \u{1F449} `;  // Adiciona cada número da contagem ao resultado
+					}
+					res.innerHTML += `\u{1F3C1}`;  // Adiciona um ícone ao final da contagem
+				} else {
+					// Realiza a contagem decrescente
+					for (let c = i; c >= f; c -= p) {
+						res.innerHTML += `${c} \u{1F449} `;  // Adiciona cada número da contagem ao resultado
+					}
+					res.innerHTML += `\u{1F3C1}`;  // Adiciona um ícone ao final da contagem
+				}
+			}
 		}
-		
-		}
-		
-
-
-
-
-</script>
-
+	</script>
 </body>
 </html>
