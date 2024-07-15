@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* Define o estilo do corpo da página */
+		body {
+			background-color: rgb(85, 162, 185);
+			font-family: Arial, Helvetica, sans-serif;
+			text-align: center;
+		}
+
+		/* Define o estilo do cabeçalho */
+		header {
+			color: white;
+			text-align: center;
+		}
+
+		/* Define o estilo da seção principal */
+		#principal {
+			background-color: white;
+			border-radius: 10px;
+			padding: 15px;
+			width: 500px;
+			margin: auto;
+			box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.322);
+		}
+
+		/* Define o estilo do rodapé */
+		footer {
+			color: white;
+			text-align: center;
+			font-style: italic;
+		}
+
+		/* Define o estilo da classe "res" */
+		.res {
+			font-size: 25px;
+			height: auto;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Vamos contar ?</h1>
+	</header>
+	<section id="principal">
+		<div id="dados">
+				<p>numero:
+					<input type="number" name="num" id="txtn">
+					<input type="button" value="Gerar Tabuada" onclick="tabuada()">
+				</p>
+		</div>
+
+		<div id="res">
+			<select name="tabuada" id="seltab" size="10">
+				<option >Digite um numero acima: </option>
+			</select>
+		</div>
+	</section>
+	<footer>
+		<p>&copy; Pablo Henrique</p>
+	</footer>
+
+	<script src="Ex02.js"></script>
+</body>
+</html>
