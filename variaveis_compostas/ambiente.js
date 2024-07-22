@@ -5,7 +5,7 @@ frutas.push("laranja", "uva"); // adiciona valores no FINAL do seu array ou logo
 
 frutas.unshift("caqui", "abacaxi")//  Adiciona valores no INICIO do seu array  
 
-let ultimaFruta = frutas.pop()// remove o ultimo elemento do array frutas
+let ultimaFruta = frutas.pop()// remove o ultimo elemento do array 
 
 console.log(frutas)
 console.log(frutas.length) // Retorna o numero de elementos dentro do array frutas, mas pode retornar tambem o numeros de string em uma palavra
