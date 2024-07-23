@@ -1,82 +1,84 @@
 
+/* Centraliza o conteúdo do corpo da página */
 body{
 	text-align: center;
 }
 
+/* Estilo do botão */
 .botao{
-	position: absolute;
-	top: 50%;
-	left: 50%;
+	position: absolute; /* Posiciona o botão de forma absoluta */
+	top: 50%; /* Alinha o botão ao centro verticalmente */
+	left: 50%; /* Alinha o botão ao centro horizontalmente */
 	
-	padding: 30px;
-	border-radius: 10px;
-	background-color: rgb(255, 0, 0);
+	padding: 30px; /* Define o preenchimento interno do botão */
+	border-radius: 10px; /* Arredonda os cantos do botão */
+	background-color: rgb(255, 0, 0); /* Define a cor de fundo do botão como vermelho */
 	
-	transform: translate(-50%, -50%);
-	cursor: pointer;
-	transition: all 0.3s;
-
+	transform: translate(-50%, -50%); /* Ajusta a posição para o centro exato */
+	cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+	transition: all 0.3s; /* Define a transição para todas as propriedades em 0.3 segundos */
 }
 
+/* Estilo do botão quando o cursor está sobre ele */
 .botao:hover{
-	background-color: chartreuse;
+	background-color: chartreuse; /* Muda a cor de fundo do botão para chartreuse ao passar o mouse */
 }
 
+/* Estilo da tela escura */
 .tela_escura{
-	position: absolute;
-	top: 0;/* O topp e o left em 0 faz com que a div tome a tela toda*/
-	left: 0; 
-	width: 100%;
-	height: 100%;
-	background-color: rgba(70, 50, 50, 80%);
-
-	visibility: hidden;/*Vai deixar o elemento invisivel*/
+	position: absolute; /* Posiciona a tela escura de forma absoluta */
+	top: 0; /* Alinha a tela ao topo da página */
+	left: 0; /* Alinha a tela à esquerda da página */
+	width: 100%; /* Define a largura da tela como 100% */
+	height: 100%; /* Define a altura da tela como 100% */
+	background-color: rgba(70, 50, 50, 80%); /* Define a cor de fundo com transparência */
+	visibility: hidden; /* Torna o elemento invisível */
 }
 
+/* Estilo do modal */
 .modal{
-	background-color: white;
-	width: 30%;
-	height: 40%;
+	background-color: white; /* Define a cor de fundo do modal como branco */
+	width: 30%; /* Define a largura do modal */
+	height: 40%; /* Define a altura do modal */
 	
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	position: absolute; /* Posiciona o modal de forma absoluta */
+	top: 50%; /* Alinha o modal ao centro verticalmente */
+	left: 50%; /* Alinha o modal ao centro horizontalmente */
+	transform: translate(-50%, -50%); /* Ajusta a posição para o centro exato */
 
-	animation-name: abrir_modal;
-	animation-duration: 3s;
-	animation-timing-function: ease-in-out; /*Tipo de vizualisação da animação*/
+	animation-name: abrir_modal; /* Define o nome da animação a ser usada */
+	animation-duration: 3s; /* Define a duração da animação */
+	animation-timing-function: ease-in-out; /* Define a função de timing da animação */
 }
 
+/* Estilo das imagens dentro do modal */
 .modal img{
-	width: 90%;
-	height: 90%;
-	margin-top: 20px;
-	margin-left: 15px;
-
+	width: 90%; /* Define a largura da imagem */
+	height: 90%; /* Define a altura da imagem */
+	margin-top: 20px; /* Define a margem superior da imagem */
+	margin-left: 15px; /* Define a margem esquerda da imagem */
 }
 
+/* Estilo do botão de fechar o modal */
 .fechar{
-	width: 20px;
-	height: 20px;
-
-	background-color: white;
-	
-	float: right;
-	cursor: pointer;
-	border: 0.5px solid black;
+	width: 20px; /* Define a largura do botão */
+	height: 20px; /* Define a altura do botão */
+	background-color: white; /* Define a cor de fundo do botão */
+	float: right; /* Alinha o botão à direita */
+	cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+	border: 0.5px solid black; /* Define uma borda preta ao redor do botão */
 }
 
+/* Animação para abrir o modal */
 @keyframes abrir_modal{
 	from{
-		opacity: 0.0;/*Totalmente transaparente*/
-		width: 0px;
-		height: 0px;
+		opacity: 0.0; /* Inicialmente transparente */
+		width: 0px; /* Largura inicial */
+		height: 0px; /* Altura inicial */
 	}
-
 	to{
-		opacity: 1.0;/*Totalmente solido*/
-		width: 30%;
-		height: 40%;
+		opacity: 1.0; /* Totalmente opaco */
+		width: 30%; /* Largura final */
+		height: 40%; /* Altura final */
 	}
 }

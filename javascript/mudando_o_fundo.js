@@ -2,6 +2,7 @@ let element = document.getElementById("header")
 function modo_escuro(){
 	let element = document.getElementById("header")
 	document.getElementById("fundo").style.backgroundColor="black";
+	document.getElementById("fundo").style.transition="0.5s all"
 	document.getElementById("fundo").style.color="white";
 	document.getElementById("myImage").src="../imagens/jordan_5.jpg";
 	element.innerHTML= "Testando o modo escuro!!!"
