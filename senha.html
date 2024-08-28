@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Confirmador de Senha</title>
+</head>
+<body>
+	<div>
+		<label for="sn1">Escreva a senha:</label>
+		<input type="password" name="senha1" id="sn1">
+	
+		<label for="sn2">Confirme a senha:</label>
+		<input type="password" name="senha2" id="sn2">
+	
+		<button onclick="Confirmar()">Confirmar</button>
+	</div>
+
+	<div id="res">
+
+	</div>
+	
+	<script>
+		function Confirmar(){
+			let senha1 = document.getElementById('sn1').value
+			let senha2 = document.getElementById('sn2').value
+			let res = document.getElementById('res')
+			if(senha1 !== senha2){
+				alert('Você digitou senhas diferentes')
+			}else{
+				alert('Senha correta')
+				res.innerHTML= document.write('A senha é: ' + senha1)
+			}
+
+
+			
+
+		}
+	</script>
+</body>
+</html>
